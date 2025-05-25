@@ -15,7 +15,7 @@ jobs:
       fail-fast: false
       max-parallel: 8
       matrix:
-        tag_branche: [istoreos-24.10]
+        tag_branche: [master,istoreos-24.10,istoreos-22.03.6]
         compile: [FLOW_OFFLOAD,SHORTCUT_FE,SHORTCUT_FE_CM,SHORTCUT_FE_DRV]
     steps:
           - name: 将存储库签出到运行器
