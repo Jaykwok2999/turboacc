@@ -1,6 +1,6 @@
 # luci-app-turboacc
 
-中文|[English](https://github.com/Jaykwok2999/turboacc/blob/main/README_EN.md)
+中文|[English](https://github.com/Jaykwok2999/turboacc/blob/luci/README_EN.md)
 
 一个适用于官方openwrt(22.03/23.05) firewall4的turboacc  
 包括以下功能：软件流量分载、Shortcut-FE、全锥型 NAT、BBR 拥塞控制算法  
@@ -15,7 +15,7 @@
     带sfe:
 
     ```bash
-    curl -sSL https://raw.githubusercontent.com/Jaykwok2999/turboacc/main/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
+    curl -sSL https://raw.githubusercontent.com/Jaykwok2999/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
     ```
 
     > 这将会下载luci-app-turboacc、nft-fullcone、shortcut-fe 替换firewall4、libnftnl、nftables并打上952、613、953补丁。
@@ -23,7 +23,7 @@
     不带sfe:
 
     ```bash
-    curl -sSL https://raw.githubusercontent.com/Jaykwok2999/turboacc/main/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh --no-sfe
+    curl -sSL https://raw.githubusercontent.com/Jaykwok2999/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh --no-sfe
     ```
 
     > 这将会下载luci-app-turboacc、nft-fullcone 替换firewall4、libnftnl、nftables并打上952补丁。
@@ -43,8 +43,8 @@ make menuconfig
 
 ## 插件预览
 
-![插件预览](https://raw.githubusercontent.com/Jaykwok2999/turboacc/main/img/1.png)
-![效果预览](https://raw.githubusercontent.com/Jaykwok2999/turboacc/main/img/2.png)
+![插件预览](https://raw.githubusercontent.com/Jaykwok2999/turboacc/luci/img/1.png)
+![效果预览](https://raw.githubusercontent.com/Jaykwok2999/turboacc/luci/img/2.png)
 
 ## 关于
 
@@ -54,7 +54,7 @@ make menuconfig
 
 软件流量分载(Flow Offload)：[kmod-nft-offload](https://github.com/openwrt/openwrt/blob/80edfaf675364835e6d2e17d97ebec6afc6b2103/package/kernel/linux/modules/netfilter.mk#L1182C1-L1199C42)(官方openwrt自带)
 
-Shortcut-FE：[shortcut-fe](https://github.com/chenmozhijin/turboacc/tree/package/shortcut-fe)、952补丁、953补丁
+Shortcut-FE：[shortcut-fe](https://github.com/Jaykwok2999/turboacc/tree/package/shortcut-fe)、952补丁、953补丁
 
 全锥型 NAT（FULLCONE NAT）：[nft-fullcone](https://github.com/fullcone-nat-nftables/nft-fullcone)、修补的firewall4、libnftnl、nftables与952补丁
 
