@@ -38,7 +38,7 @@ jobs:
         
         
          
-        git clone --depth=1 https://github.com/chenmozhijin/turboacc.git -b package ./tmp
+        git clone --depth=1 https://github.com/chenmozhijin/turboacc.git -b package
         mv ./tmp/* ./
         rm -rf ./tmp
         
